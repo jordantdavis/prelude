@@ -55,11 +55,15 @@
    `(org-document-title ((t (,@headline ,@variable-tuple :height 1.8 :underline nil))))))
 
 (setq org-capture-templates
-      '(("n" "Note"
-         entry (file+headline "~/org/notes.org" "Random Notes")
-         "** %?"
+      '(("i" "Inbox"
+         entry (file "~/org/inbox.org")
+         "* %?"
          :empty-lines 0)
-        ("g" "General To-Do"
+        ("j" "Daily Log Entry"
+         entry (file+datetree "~/org/daily-log.org")
+         "* %?"
+         :empty-lines 0)
+        ("g" "General Todo"
          entry (file+headline "~/org/todos.org" "General Tasks")
          "* TODO [#B] %?\n:Created: %T\n "
          :empty-lines 0)
