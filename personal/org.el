@@ -82,7 +82,7 @@
 
 ;; todo states
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "PLANNING(p)" "IN-PROGRESS(i@/!)" "VERIFYING(v!)" "BLOCKED(b@)"  "|" "DONE(d!)" "OBE(o@!)" "WONT-DO(w@/!)" )
+      '((sequence "TODO(t)" "PLANNING(p)" "INPROGRESS(i@/!)" "VERIFYING(v!)" "BLOCKED(b@)"  "|" "DONE(d!)" "OBE(o@!)" "WONTDO(w@/!)" )
         ))
 
 ;; todo colors
@@ -90,10 +90,12 @@
       '(
         ("TODO" . (:foreground "GoldenRod" :weight bold))
         ("PLANNING" . (:foreground "DeepPink" :weight bold))
-        ("IN-PROGRESS" . (:foreground "Cyan" :weight bold))
+        ("INPROGRESS" . (:foreground "Cyan" :weight bold))
         ("VERIFYING" . (:foreground "DarkOrange" :weight bold))
         ("BLOCKED" . (:foreground "Red" :weight bold))
         ("DONE" . (:foreground "LimeGreen" :weight bold))
         ("OBE" . (:foreground "LimeGreen" :weight bold))
-        ("WONT-DO" . (:foreground "LimeGreen" :weight bold))
+        ("WONTDO" . (:foreground "LimeGreen" :weight bold))
         ))
+
+(setq org-refile-targets '((org-agenda-files :maxlevel . 1)))
