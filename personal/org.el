@@ -56,8 +56,8 @@
 
 (setq org-capture-templates
       '(("i" "Inbox"
-         entry (file "~/org/inbox.org")
-         "* %?"
+         entry (file+headline "~/org/inbox.org" "Inbox")
+         "* CLARIFY %?\n:Created: %T\n"
          :empty-lines 0)
         ("j" "Daily Log Entry"
          entry (file+datetree "~/org/daily-log.org")
@@ -82,13 +82,14 @@
 
 ;; todo states
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "PLANNING(p)" "INPROGRESS(i@/!)" "VERIFYING(v!)" "BLOCKED(b@)"  "|" "DONE(d!)" "OBE(o@!)" "WONTDO(w@/!)" )
+      '((sequence "TODO(t)" "CLARIFY(c)" "PLANNING(p)" "INPROGRESS(i@/!)" "VERIFYING(v!)" "BLOCKED(b@)"  "|" "DONE(d!)" "OBE(o@!)" "WONTDO(w@/!)" )
         ))
 
 ;; todo colors
 (setq org-todo-keyword-faces
       '(
         ("TODO" . (:foreground "GoldenRod" :weight bold))
+        ("CLARIFY" . (:foreground "Purple" :weight bold))
         ("PLANNING" . (:foreground "DeepPink" :weight bold))
         ("INPROGRESS" . (:foreground "Cyan" :weight bold))
         ("VERIFYING" . (:foreground "DarkOrange" :weight bold))
