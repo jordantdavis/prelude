@@ -140,3 +140,21 @@ exist after each headings's drawers."
         ))
 
 (setq org-refile-targets '((org-agenda-files :maxlevel . 1)))
+
+;; tags
+(setq org-tag-alist '(
+                      ;; ticket types
+                      (:startgroup . nil)
+                      ("@feature" . ?u)
+                      ("@spike" . ?j)
+                      ("@bug" . ?b)
+                      (:endgroup . nil)
+
+                      ;; meeting types
+                      (:startgroup . nil)
+                      ("calibration" . ?c)
+                      ("standup" . ?s)
+                      ("1x1" . ?1)
+                      ("retro" . ?r)
+                      (:endgroup . nil)
+                      ))
