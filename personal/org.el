@@ -123,15 +123,14 @@ exist after each headings's drawers."
 
 ;; todo states
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "CLARIFY(c)" "PLANNING(p)" "INPROGRESS(i@/!)" "VERIFYING(v!)" "BLOCKED(b@)"  "|" "DONE(d!)" "OBE(o@!)" "WONTDO(w@/!)" )
-        ))
+      '((sequence "CLARIFY(c)" "TODO(t)" "NEXT(n)" "INPROGRESS(i@/!)" "VERIFYING(v!)" "BLOCKED(b@)" "|" "DONE(d!)" "OBE(o@!)" "WONTDO(w@/!)")))
 
 ;; todo colors
 (setq org-todo-keyword-faces
       '(
+        ("CLARIFY" . (:foreground "violet" :weight bold))
         ("TODO" . (:foreground "GoldenRod" :weight bold))
-        ("CLARIFY" . (:foreground "Purple" :weight bold))
-        ("PLANNING" . (:foreground "DeepPink" :weight bold))
+        ("NEXT" . (:foreground "Purple" :weight bold))
         ("INPROGRESS" . (:foreground "Cyan" :weight bold))
         ("VERIFYING" . (:foreground "DarkOrange" :weight bold))
         ("BLOCKED" . (:foreground "Red" :weight bold))
