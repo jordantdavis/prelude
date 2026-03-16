@@ -98,7 +98,7 @@ exist after each headings's drawers."
 (setq org-capture-templates
       '(("i" "Inbox"
          entry (file+headline "~/org/inbox.org" "Inbox")
-         "* CLARIFY %?\n:Created: %T\n"
+         "* CLARIFY %?\n"
          :empty-lines 0)
         ("j" "Daily Log Entry"
          entry (file+datetree "~/org/daily-log.org")
@@ -106,15 +106,15 @@ exist after each headings's drawers."
          :empty-lines 0)
         ("g" "General Todo"
          entry (file+headline "~/org/todos.org" "General Tasks")
-         "* TODO [#B] %?\n:Created: %T\n "
+         "* TODO %?\n"
          :empty-lines 0)
         ("c" "Code To-Do"
          entry (file+headline "~/org/todos.org" "Code Related Tasks")
-         "* TODO [#B] %?\n:Created: %T\n%i\n%a\nProposed Solution: "
+         "* TODO %?\n%i\n%a\nProposed Solution: "
          :empty-lines 0)
         ("m" "Meeting"
          entry (file+datetree "~/org/meetings.org")
-         "* %? :meeting:%^g \n:Created: %T\n** Attendees\n*** \n** Notes\n** Action Items\n*** TODO [#A] "
+         "* %? :meeting:%^g \n** Attendees\n*** \n** Notes\n** Action Items\n*** TODO "
          :tree-type week
          :clock-in t
          :clock-resume t
