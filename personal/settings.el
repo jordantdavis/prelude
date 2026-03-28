@@ -10,3 +10,5 @@
 (setq display-line-numbers-type 'relative)
 
 (setq whitespace-line-column 100)
+
+(setq confirm-kill-emacs 'y-or-n-p)
